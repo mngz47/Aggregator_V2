@@ -3,4 +3,3 @@ wtforms
 requests
 gunicorn
 bs4
-FaceBook
