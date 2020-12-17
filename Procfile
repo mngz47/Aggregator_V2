@@ -1,1 +1,1 @@
-worker: python DiscordBot.py
+web: gunicorn main.py:main.py
