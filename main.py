@@ -36,14 +36,13 @@ class main(Form):
         form = main(request.form)
         print form.errors
         if request.method == 'POST':
-        if form.validate():
-            
+          if form.validate():
             CATEGORIES=request.form['categories']
             AFFLINK=request.form['afflink']
             BANNER=request.form['banner']
             VIDEO=request.form['video']
             startScrape()
-        else:
+          else:
             flash('All the form fields are required. ')
     
     CATEGORIES = TextField('Categories:', validators=[validators.required()])
