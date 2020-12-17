@@ -34,7 +34,7 @@ class main(Form):
     @app.route("/getForm", methods=['GET', 'POST'])       
     def getForm(self):
         form = main(request.form)
-        print form.errors
+        print(form.errors)
         if request.method == 'POST':
           if form.validate():
             CATEGORIES=request.form['categories']
