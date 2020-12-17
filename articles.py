@@ -3,8 +3,13 @@ from bs4 import BeautifulSoup
 
 import requests
 
-class articles(category):
+class articles:
 
+    category = ''
+    
+    def __init__(self, category):
+        self.category = category
+    
     categories = []
    
     articles = []
