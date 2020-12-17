@@ -1,7 +1,6 @@
 
 import requests
-import settings
-import os
+#import os
 
 class facebook:
     
