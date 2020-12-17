@@ -38,4 +38,5 @@ class facebook:
             "access_token": self.token
         }
         r = requests.post("https://graph.facebook.com/v5.0/" + self.fb_page_id  + "/feed", data=params)
-        return (r?"Succes":"failure")
+        return "Success" if r else "Failure"
+    
