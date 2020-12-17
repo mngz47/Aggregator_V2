@@ -3,8 +3,8 @@ import requests
 import settings
 import os
 
-
-class FaceBook:
+class facebook:
+    
     token = ""
     fb_page_id = ""
     
