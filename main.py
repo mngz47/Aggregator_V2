@@ -11,7 +11,12 @@ app = Flask(__name__)
 #app.config.from_object(__name__)
 #app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
     
-class main(Form):
+class main:
+    
+    def __init__(self,Form):
+        return Form
+        
+        
     CATEGORIES = TextField('Categories:', validators=[validators.required()])
     AFFLINK = TextField('AffLink:', validators=[validators.required()])
     BANNER = TextField('Banner:', validators=[validators.required()])
@@ -37,7 +42,7 @@ class main(Form):
     
     @app.route("/getForm", methods=['GET', 'POST'])       
     def getForm(self):
-        form = main(request.form)
+        form = main(self.request.form)
         print(form.errors)
         if request.method == 'POST':
           if form.validate():
