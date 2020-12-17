@@ -23,12 +23,12 @@ class main(Form):
             #post-share 4 articles per day depending on database index
             articlebody = cc.getArticleBody(aa)[1]
             if articlebody.len()>1500:
-            articletitle = cc.getArticleBody(aa)[0]    
-            pp = post()
-            flash(pp.send(articletitle,'<a href='+AFFLINK+' ><img src="'+BANNER+'" /></a><br><br>'+articlebody+
-            '<br><br><iframe width="640" height="360" src="'+VIDEO+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',CATEGORIES))
-            ss = share()
-            flash(ss.send(articletitle,articlebody.substring(0,40),aa))
+                articletitle = cc.getArticleBody(aa)[0]    
+                pp = post()
+                flash(pp.send(articletitle,'<a href='+AFFLINK+' ><img src="'+BANNER+'" /></a><br><br>'+articlebody+
+                '<br><br><iframe width="640" height="360" src="'+VIDEO+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',CATEGORIES))
+                ss = share()
+                flash(ss.send(articletitle,articlebody.substring(0,40),aa))
     
     
     @app.route("/getForm", methods=['GET', 'POST'])       
