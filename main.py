@@ -18,15 +18,17 @@ class main(Form):
         cc.findCategories()
         cc.findArticles()
         for aa in cc.articles:
-            time.sleep(10)
+            time.sleep(2)
             #store request and process it number of days
             #post-share 4 articles per day depending on database index
-            if cc.getArticleBody(aa)[1].len()>1500:
+            articlebody = cc.getArticleBody(aa)[1]
+            if articlebody.len()>1500:
+            articletitle = cc.getArticleBody(aa)[0]    
             pp = post()
-            flash(pp.send(cc.getArticleBody(aa)[0],'<a href='+AFFLINK+' ><img src="'+BANNER+'" /></a><br><br>'+cc.getArticleBody(aa)[1]+
+            flash(pp.send(articletitle,'<a href='+AFFLINK+' ><img src="'+BANNER+'" /></a><br><br>'+articlebody+
             '<br><br><iframe width="640" height="360" src="'+VIDEO+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',CATEGORIES))
             ss = share()
-            flash(ss.send(cc.getArticleBody(aa)[0],cc.getArticleBody(aa)[1].substring(0,40),aa))
+            flash(ss.send(articletitle,articlebody.substring(0,40),aa))
     
     
     @app.route("/getForm", methods=['GET', 'POST'])       
