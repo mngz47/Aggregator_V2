@@ -8,8 +8,8 @@ from flask import Flask, render_template, redirect, url_for, request
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 
 app = Flask(__name__)
-app.config.from_object(__name__)
-app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
+#app.config.from_object(__name__)
+#app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
     
 class main(Form):
     
@@ -28,7 +28,7 @@ class main(Form):
             flash(ss.send(cc.getArticleBody(aa)[0],cc.getArticleBody(aa)[1].substring(0,40),aa))
     
     
-    @app.route("/", methods=['GET', 'POST'])       
+    @app.route("/getForm", methods=['GET', 'POST'])       
     def getForm(self):
         form = main(request.form)
         print form.errors
