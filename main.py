@@ -40,7 +40,7 @@ class main:
                 flash(ss.send(articletitle,articlebody.substring(0,40),aa))
     
     
-    @app.route("/getForm", methods=['GET', 'POST'])       
+    @app.route("/", methods=['GET', 'POST'])       
     def getForm(self):
         form = main(self.request.form)
         print(form.errors)
