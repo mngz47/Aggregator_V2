@@ -37,6 +37,9 @@ class main:
                 ss = share()
                 flash(ss.send(articletitle,articlebody.substring(0,40),aa))
     
+    @app.route("/fff")
+    def index():
+         return "Flask App!"
     
     @app.route("/", methods=['GET', 'POST'])       
     def getForm(self):
