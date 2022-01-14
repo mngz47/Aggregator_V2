@@ -12,7 +12,7 @@ app = Flask(__name__)
     
 class main:
     
-    def __init__(self,Form):
+    def __init__(Form):
         return Form
         
         
