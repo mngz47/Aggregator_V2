@@ -1,0 +1,7 @@
+flask
+wtforms
+requests
+gunicorn
+bs4
+waitress
+jsonify

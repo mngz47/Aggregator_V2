@@ -1,0 +1,25 @@
+<head>
+<title>Agg V2</title>
+</head>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul>
+                    {% for message in messages %}
+ 	<li>{ { message[1] }}</li>
+{% endfor %}</ul>
+{% endif %}
+{% endwith %}
+<form action="" method="post">
+            &#123; &#123; form.csrf &#125;&#125;
+<div class="input text">
+                { { form.CATEGORIES.label }} { { form.CATEGORIES }}</div>
+<div class="input text">
+                { { form.AFFLINK.label }} { { form.AFFLINK }}</div>
+<div class="input text">
+                { { form.BANNER.label }} { { form.BANNER }}</div>
+<div class="input text">
+                { { form.VIDEO.label }} { { form.VIDEO }}</div>				
+<div class="input submit">
+                <input type="submit" value="Submit"></div>
+</form>
