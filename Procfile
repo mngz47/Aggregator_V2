@@ -1,1 +1,1 @@
-web: gunicorn __init__:main
+web: gunicorn Aggregator_V2:main
