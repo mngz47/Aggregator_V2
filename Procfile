@@ -1,1 +1,1 @@
-web: gunicorn aggregator-v2:main
+web: gunicorn agg:main
