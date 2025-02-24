@@ -6,7 +6,8 @@ import share
 import time
 import os
 from flask import Flask, render_template, redirect, url_for, request
-from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
+from flask_wtf import Form
+from wtforms import TextField, TextAreaField, validators, StringField, SubmitField
 
 app = Flask(__name__)
     
